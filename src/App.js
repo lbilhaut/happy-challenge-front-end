@@ -29,11 +29,30 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>~App in development~</p>
+        <p>
+          ~ <strong>HAPPY</strong> CHALLENGE is still in development ~
+        </p>
         <img src="images/Logo-whiteBG-small.png" alt="logo" />
-        <h1>Connect with your friends & make your life better</h1>
-        <PhoneNumber user={"challenger"}></PhoneNumber>
-        <PhoneNumber user={"defender"}></PhoneNumber>
+        <h1>Connect with your friends & make your life better!</h1>
+        <Container>
+          <Row>
+            <Col
+              xs={12}
+              md={6}
+              className="justify-content-center d-flex pb-3 pb-sm-3"
+            >
+              <PhoneNumber user={"challenger"}></PhoneNumber>
+            </Col>
+            <Col
+              xs={12}
+              md={6}
+              className="justify-content-center d-flex pb-3 pb-sm-3"
+            >
+              <PhoneNumber user={"defender"}></PhoneNumber>
+            </Col>
+          </Row>
+        </Container>
+        <h2>Pick a challenge type</h2>
         <Container>
           <Row>
             {challengeTypes.types.map((challengeType) => {
@@ -55,7 +74,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more about the Happy Challenge Project!
+          Learn more about the Happy Challenge Project
         </a>
       </header>
     </div>
